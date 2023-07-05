@@ -1,0 +1,9 @@
+requests
+fastapi
+requests
+selenium
+uvicorn[standard]
+aiofiles
+httpx
+celery[redis]
+flower
