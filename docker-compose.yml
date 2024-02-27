@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+
+  web:
+    build: ./
+    ports: 
+      - 8004:8888
+    expose:
+      - 8000
+      - 8001
+    # Remove reload later
+    command: uvicorn main:app --host 0.0.0.0  --port 8888 --reload
+    volumes:
+      - ./:/usr/src/app
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+
+  worker:
+    build: ./
+    command: celery -A tasks worker --loglevel=info --logfile=logs/celery.log
+    volumes:
+      - ./project:/usr/src/app
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - web
+      - redis
+    expose:
+      - 8000
+      - 8001
+
+
+
+  dashboard:
+    build: ./
+    command: celery -A tasks flower
+    ports:
+      - 5556:5555
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - web
+      - redis
+      - worker
+
+
+  redis:
+    image: redis:6-alpine
