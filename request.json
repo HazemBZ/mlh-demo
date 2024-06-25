@@ -1,0 +1,327 @@
+{
+  "id": "2",
+  "share_id": "4f50a6995768bd1d98c3672366df0a73",
+  "websites": [
+    "2"
+  ],
+  "credentials": {
+    "2": {
+      "menzili_login": "tilzxivqvzjmubrgsh@cazlp.com",
+      "menzili_password": "tilzxivqvzjmubrgsh"
+    }
+  },
+  "property": {
+    "id": "5749",
+    "vocation": {
+      "id": "2",
+      "name": "Location"
+    },
+    "emplacement": "Tunisie, Ariana, La Soukra, Chotrana 1",
+    "emplacement2": "Ariana, La Soukra, Chotrana 1",
+    "pays": [],
+    "gouvernorat": {
+      "id": 126,
+      "name": "Ariana",
+      "name_slug": "ariana",
+      "id_tayara": 12,
+      "id_jumia": 17,
+      "id_menzili": 27,
+      "id_cava": null
+    },
+    "delegation": {
+      "id": 880,
+      "name": "La Soukra",
+      "name_slug": "la-soukra",
+      "id_tayara": 125253,
+      "id_jumia": 105,
+      "id_menzili": 100,
+      "id_cava": null
+    },
+    "localite": [],
+    "name": "Appartement s1 Haut Standing",
+    "reference": null,
+    "reference_immo": null,
+    "property_type": {
+      "id": "5",
+      "name": "Appartement",
+      "name_slug": "appartement"
+    },
+    "images": [
+    ],
+    "chambres": 1,
+    "sejours": null,
+    "wc_number": null,
+    "sdb_number": 1,
+    "places_parking_number": null,
+    "salle_de_bain": null,
+    "surface": "74",
+    "surface_couverte": null,
+    "surface_terrain": 74,
+    "surface_habitable": 74,
+    "description": "A louer Appartement s+1 a Chotrana 1 , la soukra . - Appartement au 1er etage - Residence avec ascenseur - Residence gardee jour et nuit avec code d&#39;acces. - Salon lumineux avec un grand balcon . - Chambre a coucher avec grand dressing. - Salle de Bain avec douche à l&#39;italienne . - Cuisine bien equipe d&#39;elements de rangement, four ,plaque et haute aspirante. - deux climatiseurs - chauffage central - Place parking sous sol _ Systeme d&#39;alarme - Interphone avec camera - dressing a l&#39;entree et un autre au niveau du couloir . #api-test",
+    "pieces": {
+      "value": 1
+    },
+    "adresse": null,
+    "prix": "950",
+    "prix_visible": true,
+    "suite_parentale": null,
+    "terrasse": null,
+    "piscine": null,
+    "jardin": null,
+    "chambre_service": null,
+    "phone": "25125125"
+  },
+  "property_serialized": {
+    "owner_data": null,
+    "web_path": {
+      "small": "/uploads/media/property/0001/43/thumb_42822_property_small.jpeg",
+      "large": "/uploads/media/property/0001/43/thumb_42822_property_large.jpeg",
+      "xlarge": "/uploads/media/property/0001/43/thumb_42822_property_xlarge.jpeg"
+    },
+    "gouvernorat": {
+      "id": 126,
+      "name": "Ariana",
+      "name_slug": "ariana"
+    },
+    "delegation": {
+      "id": 880,
+      "name": "La Soukra",
+      "name_slug": "la-soukra",
+      "gouvernorat": {
+        "id": 126,
+        "name": "Ariana",
+        "name_slug": "ariana"
+      }
+    },
+    "localite": {
+      "id": 45937,
+      "name": "Chotrana 1",
+      "name_slug": "chotrana-1",
+      "delegation": {
+        "id": 880,
+        "name": "La Soukra",
+        "name_slug": "la-soukra",
+        "gouvernorat": {
+          "id": 126,
+          "name": "Ariana",
+          "name_slug": "ariana"
+        }
+      },
+      "lat": 36.91031085,
+      "lng": 10.315530729100953,
+      "radius": 11034.390254807
+    },
+    "lat": null,
+    "lng": null,
+    "classification_albuhaira_label": "Habitat semi-collectif (HSC)",
+    "classification_albuhaira_color": "#90726B",
+    "id": 5749,
+    "name": "Appartement s1 Haut Standing",
+    "name_slug": "appartement-s1-haut-standing",
+    "note": null,
+    "conditions": null,
+    "titles": [],
+    "reference": "dossenheim",
+    "reference_immo": "Ref31a",
+    "property_type": {
+      "id": 5,
+      "name": "Appartement",
+      "name_slug": "appartement"
+    },
+    "projet_property_type": null,
+    "property_mandat": null,
+    "property_sub_type": [],
+    "features": [],
+    "statut": {
+      "id": 2,
+      "name": "Disponible"
+    },
+    "images": [
+      
+    ],
+    "plans_images": [],
+    "plans_pdfs": [],
+    "chambres": 1,
+    "suites": null,
+    "sejours": null,
+    "wc_number": null,
+    "total_pieces": 1,
+    "sdb_number": 1,
+    "salles_manger": null,
+    "places_parking_number": null,
+    "salle_de_bain": null,
+    "surface": null,
+    "surface_terrasse": null,
+    "surface_terrain": 74,
+    "surface_couverte": null,
+    "surface_habitable": 74,
+    "surface_commune": null,
+    "surface_hors_oeuvre": null,
+    "surface_jardin": null,
+    "surface_piscine": null,
+    "adresse": null,
+    "prix": 950,
+    "note_post_prix": null,
+    "prix_par_metre": 12.837837837837839,
+    "note_post_prix_par_metre": null,
+    "prix_visible": true,
+    "prix_par_metre_visible": false,
+    "suite_parentale": null,
+    "terrasse": null,
+    "piscine": null,
+    "land_title": null,
+    "internet_network": null,
+    "balcony": null,
+    "wifi": null,
+    "elevator": null,
+    "electric_power": null,
+    "water_supply": null,
+    "optical_fiber": null,
+    "jardin": null,
+    "cellar": null,
+    "parking_space": null,
+    "chambre_service": null,
+    "jumelee": null,
+    "classification_albuhaira": 2,
+    "etage": null,
+    "nombre_etages": null,
+    "annee_construction": null,
+    "description": "<p dir=\"auto\">A louer Appartement s+1 a Chotrana 1 , la soukra . - Appartement au 1er etage - Residence avec ascenseur - Residence gardee jour et nuit avec code d&#39;acces. - Salon lumineux avec un grand balcon . - Chambre a coucher avec grand dressing. - Salle de Bain avec douche &agrave; l&#39;italienne . - Cuisine bien equipe d&#39;elements de rangement, four ,plaque et haute aspirante. - deux climatiseurs - chauffage central - Place parking sous sol _ Systeme d&#39;alarme - Interphone avec camera - dressing a l&#39;entree et un autre au niveau du couloir .&nbsp;<strong>#api-test</strong></p>",
+    "descriptions": [],
+    "cadastre": null,
+    "fake_lat": null,
+    "fake_lng": null,
+    "map_visible": null,
+    "meublee": null,
+    "projet": null,
+    "projet_name": null,
+    "block": null,
+    "block_name": null,
+    "tranche": null,
+    "vocations": [],
+    "vocation": {
+      "id": 2,
+      "name": "Location",
+      "name_slug": "location"
+    },
+    "published": true,
+    "published_feed": false,
+    "keys_at_agency": null,
+    "created_at": "2022-09-25T21:50:07+0000",
+    "updated_at": "2022-12-07T18:27:52+0000",
+    "updated_at_manually": "2022-09-25T09:50:00+0000",
+    "usages_biens": [],
+    "agents": [],
+    "agency": {
+      "id": 9,
+      "name": "717692",
+      "name_slug": "717692",
+      "description": null,
+      "is_active": true,
+      "is_principale": null,
+      "tel": "+21623232323",
+      "tel2": null,
+      "tel3": null,
+      "fax": null,
+      "adresse": null,
+      "gouvernorats": [],
+      "delegations": [],
+      "localites": [
+        {
+          "id": 45874,
+          "name": "Ariana",
+          "name_slug": "ariana",
+          "delegation": {
+            "id": 877,
+            "name": "Ariana Ville",
+            "name_slug": "ariana-ville",
+            "gouvernorat": {
+              "id": 126,
+              "name": "Ariana",
+              "name_slug": "ariana"
+            }
+          },
+          "lat": 36.91031085,
+          "lng": 10.315530729100953,
+          "radius": 11034.390254807
+        },
+        {
+          "id": 45937,
+          "name": "Chotrana 1",
+          "name_slug": "chotrana-1",
+          "delegation": {
+            "id": 880,
+            "name": "La Soukra",
+            "name_slug": "la-soukra",
+            "gouvernorat": {
+              "id": 126,
+              "name": "Ariana",
+              "name_slug": "ariana"
+            }
+          },
+          "lat": 36.91031085,
+          "lng": 10.315530729100953,
+          "radius": 11034.390254807
+        }
+      ],
+      "vocations": [
+        {
+          "id": 1,
+          "name": "Vente",
+          "name_slug": "vente"
+        },
+        {
+          "id": 3,
+          "name": "Location saisonnière",
+          "name_slug": "location-saisonniere"
+        }
+      ],
+      "property_types": [
+        {
+          "id": 1,
+          "name": "Maison / Villa",
+          "name_slug": "maison-villa"
+        }
+      ],
+      "facebook": "https://facebook.com",
+      "instagram": "https://facebook.com",
+      "linkedin": "https://facebook.com",
+      "whatsapp": null,
+      "lat": 36.81897,
+      "lng": 10.16579
+    },
+    "agent": null,
+    "mandats": [],
+    "land_use_tmp": null,
+    "cuffar": null,
+    "surface_cuffar": null,
+    "cos_coverage": null,
+    "surface_cos_coverage": null,
+    "emprise": null,
+    "elevation": null,
+    "currency": null,
+    "debut_livraison": null,
+    "availabilty_verification_date": null,
+    "livraison_immediate": true,
+    "video": null,
+    "plot_classification": null,
+    "plot_classifications": null,
+    "zone": null,
+    "new": false,
+    "link_video": null,
+    "link_visit360": null,
+    "link_videos": [],
+    "link_visit360s": [],
+    "ongoing_project": null,
+    "west_lenth": null,
+    "east_lenth": null,
+    "north_lenth": null,
+    "south_lenth": null,
+    "explained_criteres": []
+  },
+  "host": "https://books.toscrape.com",
+  "url_when_getting_data": "https://books.toscrape.com/catalogue/sapiens-a-brief-history-of-humankind_996/index.html",
+  "url_when_finish": "https://books.toscrape.com/catalogue/olio_984/index.html",
+  "X_TOKEN": "3Eh0QPaoSjytYITSpz0Il8yJDOCIQt0v"
+}
