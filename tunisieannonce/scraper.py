@@ -1,7 +1,6 @@
 import re
 
-from cavatn.templates import (ANNOUNCE_TEMPLATE, PROPERTY_MAPPING,
-                              TRANSACTION_MAPPING)
+from cavatn.templates import ANNOUNCE_TEMPLATE, PROPERTY_MAPPING, TRANSACTION_MAPPING
 from helpers.base_entities import BaseScraper
 from helpers.parsers import AnnouncementParser
 
@@ -12,18 +11,20 @@ class TunisieAnnonceScraper(BaseScraper):
 
     # TODO: Upload all images same time
     def create_image(self, image_path):
-        print("creating image", image_path)
+        print("Creating image", image_path)
         url = "https://www.cava.tn/products/startfileupload/"
-        image_name = "".join(image_path.split("/")[-1])  # .split('.')[:-1])
+        image_name = "".join(image_path.split("/")[-1])
 
         load = self.session.get(image_path).content
         print("load", load)
         print("image name: ", image_name)
 
-        files = {"images[]": (image_name, load)}  # form data with image
+        files = {"images[]": (image_name, load)}
         resp = self.session.post(url, files=files)
         print("resp", resp.text)
-        expr = "/media/item/tmp/(\w+.\w+)"  # find out expression
+
+        # Uploaded image endpoint returned in response
+        expr = "/media/item/tmp/(\w+.\w+)"
         res = re.search(expr, resp.text)
         up_name = res.group(1)
         self.image_uploads.append(up_name)

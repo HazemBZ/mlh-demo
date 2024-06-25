@@ -22,7 +22,7 @@ class CavatnScraper(BaseScraper):
         files = {"images[]": (image_name, load)}  # form data with image
         resp = self.session.post(url, files=files)
         print("resp", resp.text)
-        expr = "/media/item/tmp/(\w+.\w+)"  # find out expression
+        expr = r"/media/item/tmp/(\w+.\w+)"  # find out expression
         res = re.search(expr, resp.text)
         up_name = res.group(1)
         self.image_uploads.append(up_name)
@@ -68,5 +68,4 @@ class CavatnScraper(BaseScraper):
             traceback.print_exception(type(e), e, e.__traceback__)
         announcement_url = re.search(".*(https://.*)", resp.text).group(1)
         print("ANNOUNCE_URL :: Cava ->", announcement_url)
-        # print(resp.status_code, resp.text)
         return announcement_url

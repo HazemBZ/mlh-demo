@@ -36,7 +36,11 @@ class TasksManager:
             print("Failed to send job start notification :: reason :: ", e)
         # TODO: Add error link in case of failure
         chord(
-            (create_task.si(site=site, data=data) for site in cls._supported_sites),
+            (
+                create_task.si(site=site, data=data)
+                for site in cls._supported_sites
+                if site in AnnouncementParser._sites
+            ),
             notify_post_task.s(
                 AnnouncementParser.jobs_end_notify_target,
                 AnnouncementParser.notify_access_header,

@@ -10,7 +10,6 @@ async def announce(request: Request):
     data = await request.json()
     print("Data reveived --- ", data)
 
-    # TODO: Create custom exceptions and handle them sequentially
     errors = []
     try:
         AnnouncementParser.parse_request(data=data)

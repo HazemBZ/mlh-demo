@@ -1,5 +1,3 @@
-# TODO: Add mappers helpers that handle access issues
-
 
 ANNOUNCE_TEMPLATE = {
     "_csrf-frontend": "wHkILzO4ZLWYcgmAg_XBDslBoEunHBOk_W2UnsVd9hCHAEMCC_k94qwGaK22vqBqjRDsCcVwZsKkLP_brweRTw==",

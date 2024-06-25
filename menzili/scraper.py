@@ -1,4 +1,3 @@
-import re
 import traceback
 from urllib.parse import parse_qs, urlparse
 
@@ -69,8 +68,6 @@ class MenziliScraper(BaseScraper):
         return resp
 
     def confirm_announcement(self, location):
-        # url = "https://www.menzili.tn/ann_pack.php?type_acc=2&id_ann=107144&id_compte=13939"
-        # TODO: Construct url yourself
         if not location:
             print("Menzili issue :: No Location found after announcement created")
             return

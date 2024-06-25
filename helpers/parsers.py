@@ -8,12 +8,9 @@ class AnnouncementParser:
 
     @classmethod
     def parse_request(cls, data):
-        # self._req = json.loads(request)
         cls._req = data
         # Parse credentials here to a more useful format
         for id, cred in cls._req["credentials"].items():
-            # cred = list(entry.values())[0]
-            # print(cred)
             keys = list(cred.keys())
             if "_login" in keys[0]:
                 website = keys[0][:-6]
