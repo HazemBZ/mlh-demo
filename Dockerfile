@@ -1,5 +1,4 @@
-# Move to slim-buster later
-FROM immotech-env:latest
+FROM python:3.12-slim-bullseye
 
 WORKDIR /usr/src/app
 
@@ -11,3 +10,7 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
+
+# RUN apt update -y && apt upgrade -y 
+RUN chmod +x ./setup.sh
+RUN ./setup.sh

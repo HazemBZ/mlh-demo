@@ -9,7 +9,7 @@ services:
     expose:
       - 8000
       - 8001
-    # Remove reload later
+    # Remove reload on prod
     command: uvicorn main:app --host 0.0.0.0  --port 8888 --reload
     volumes:
       - ./:/usr/src/app
@@ -23,7 +23,7 @@ services:
     build: ./
     command: celery -A tasks worker --loglevel=info --logfile=logs/celery.log
     volumes:
-      - ./project:/usr/src/app
+      - ./:/usr/src/app
     environment:
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
@@ -40,7 +40,7 @@ services:
     build: ./
     command: celery -A tasks flower
     ports:
-      - 5556:5555
+      - 5555:5555
     environment:
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
