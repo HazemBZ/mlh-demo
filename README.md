@@ -27,3 +27,27 @@ It is refactored in order to show only the most crucial parts;
 **Templates**: Data formats (form inputs, selection menu dictionaries, etc),
 reverse engineered to correctly parse and transfer data to the targeted website 
 
+## Setup
+
+**Run containers**
+```
+docker-compose up 
+```
+
+## Testing
+
+If you're really interested in a poc run, then you can test the system with
+one of the automated interactions.
+
+1.install httpie
+
+2.Send a pre-populated post request
+
+```
+http localhost:8004/announce < request.json
+```
+
+3.Dig the creds from the request to access the website and see the created announcement
+
+4.You can use  run `docker-compose logs web` to get more logged info and access info about created tasks @`localhost:5555` for flower dashboard
+
