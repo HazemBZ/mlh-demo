@@ -1,7 +1,4 @@
 
-This repo is a hybrid automated scraping system, taken from one of my freelance project (after the clients consent).
-It is refactored in order to show only the most crucial parts; 
- 
 ## Architecture
 
 <p align="start">
