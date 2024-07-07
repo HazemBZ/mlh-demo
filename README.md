@@ -44,7 +44,7 @@ one of the automated interactions.
 http localhost:8004/announce < request.json
 ```
 
-3.Access "https://www.menzili.tn/connexion" using the "tilzxivqvzjmubrgsh@cazlp.com" as email and "tilzxivqvzjmubrgsh" password
+3.Access "https://www.menzili.tn/connexion" using the "tilzxivqvzjmubrgsh@cazlp.com" as email and "tilzxivqvzjmubrgsh" password, count to 10 😉 and refresh.
 
 4.You can use  run `docker-compose logs web` to get more logged info and access info about created tasks @`localhost:5555` for flower dashboard
 
