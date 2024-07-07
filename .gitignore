@@ -4,5 +4,4 @@ __pycache__
 *.jpeg
 *.log
 conf
-.env.toml
 .vscode
