@@ -48,3 +48,4 @@ http localhost:8004/announce < request.json
 
 4.You can use  run `docker-compose logs web` to get more logged info and access info about created tasks @`localhost:5555` for flower dashboard
 
+5. Free resources `docker-compose down`
