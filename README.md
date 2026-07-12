@@ -2,8 +2,10 @@
 ## Architecture
 
 <p align="start">
-    <a href="images/mlh-system-architecture.html" target="_blank">View interactive architecture diagram &#8599;</a>
+    <img src="images/System_Architecture_Diagram.png" width='600'>
 <p>
+
+<a href="images/mlh-system-architecture.html" target="_blank">View interactive diagram &#8599;</a>
 
 
 ## Components
