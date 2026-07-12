@@ -1,7 +1,10 @@
 *.pyc
-__pycache__
+__pycache__/
 *.jpg
 *.jpeg
-*.log
 conf
 .vscode
+.env.toml
+.omo/
+logs/*
+!logs/.gitkeep
