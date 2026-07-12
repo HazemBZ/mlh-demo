@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MLH Demo — System Architecture",
+    "subtitle": "Automated scraper orchestration with Celery + Redis + Selenium",
+    "output": "mlh-system-architecture.html",
+    "viewBox": [1060, 680]
+  },
+  "components": [
+    {
+      "id": "client",
+      "type": "external",
+      "label": "Client",
+      "sublabel": "HTTP /announce",
+      "pos": [30, 280],
+      "size": [140, 60],
+      "tag": "POST"
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "FastAPI",
+      "sublabel": ":8888 web server",
+      "pos": [250, 110],
+      "size": [140, 60]
+    },
+    {
+      "id": "tm",
+      "type": "backend",
+      "label": "TasksManager",
+      "sublabel": "Celery chord orchestrator",
+      "pos": [250, 280],
+      "size": [140, 60]
+    },
+    {
+      "id": "redis",
+      "type": "messagebus",
+      "label": "Redis",
+      "sublabel": "broker + results backend",
+      "pos": [470, 280],
+      "size": [140, 60],
+      "tag": ":6379"
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Celery Worker",
+      "sublabel": "async task runner",
+      "pos": [690, 110],
+      "size": [140, 60]
+    },
+    {
+      "id": "scenarios",
+      "type": "backend",
+      "label": "Scenarios",
+      "sublabel": "cava / menzili / tunisie",
+      "pos": [690, 280],
+      "size": [140, 60]
+    },
+    {
+      "id": "agent",
+      "type": "frontend",
+      "label": "FFAgent",
+      "sublabel": "Selenium Firefox",
+      "pos": [690, 450],
+      "size": [140, 60]
+    },
+    {
+      "id": "flower",
+      "type": "backend",
+      "label": "Flower",
+      "sublabel": "monitoring :5555",
+      "pos": [470, 110],
+      "size": [140, 60]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Docker Compose Environment",
+      "wraps": ["api", "tm", "redis", "worker", "flower", "scenarios", "agent"]
+    }
+  ],
+  "connections": [
+    {
+      "from": "client",
+      "to": "api",
+      "label": "POST /announce",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "route": "orthogonal-h",
+      "via": [[170, 140], [250, 140]],
+      "labelAt": [210, 130]
+    },
+    {
+      "from": "api",
+      "to": "tm",
+      "label": "parse + forward",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [420, 200]
+    },
+    {
+      "from": "tm",
+      "to": "redis",
+      "label": "enqueue chord tasks",
+      "variant": "emphasis",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelAt": [430, 260]
+    },
+    {
+      "from": "redis",
+      "to": "worker",
+      "label": "pick tasks",
+      "fromSide": "right",
+      "route": "orthogonal-h",
+      "via": [[630, 210], [760, 210]],
+      "labelAt": [695, 195]
+    },
+    {
+      "from": "worker",
+      "to": "scenarios",
+      "label": "run scenario",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [840, 200]
+    },
+    {
+      "from": "scenarios",
+      "to": "agent",
+      "label": "browser automation",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [840, 395]
+    },
+    {
+      "from": "redis",
+      "to": "flower",
+      "label": "monitor queue",
+      "variant": "dashed",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "labelAt": [590, 210]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Request Flow",
+      "items": [
+        "Client sends POST with announcement data",
+        "FastAPI parses request, TasksManager orchestrates",
+        "Celery chord fans out parallel scenario tasks via Redis",
+        "Each scenario scrapes a target site (HTTP or browser)"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Components",
+      "items": [
+        "FastAPI — entry point, receives and validates requests",
+        "Celery Worker — runs async scraping tasks",
+        "Redis — message broker and results backend",
+        "Flower — real-time Celery monitoring dashboard"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Scenarios",
+      "items": [
+        "cavatn — data extraction via HTTP scraper",
+        "menzili — browser automation via Selenium/FFAgent",
+        "tunisieannonce — template-driven extraction",
+        "All run in parallel, results collected via chord callback"
+      ]
+    }
+  ]
+}

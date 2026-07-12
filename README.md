@@ -2,7 +2,7 @@
 ## Architecture
 
 <p align="start">
-    <img src="images/project-architecture.png" width='600'>
+    <a href="images/mlh-system-architecture.html" target="_blank">View interactive architecture diagram &#8599;</a>
 <p>
 
 
